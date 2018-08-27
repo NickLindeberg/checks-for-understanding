@@ -1,13 +1,13 @@
 ## Week Two - Module 2 Recap
 
-Fork or re-pull this respository. Answer the questions to the best of your ability. Try to answer them with limited amount of external research. These questions cover the majority of what we've learned this week (which is a TON - YOU are a web developer!!!). 
+Fork or re-pull this respository. Answer the questions to the best of your ability. Try to answer them with limited amount of external research. These questions cover the majority of what we've learned this week (which is a TON - YOU are a web developer!!!).
 
 Note: When you're done, submit a PR.
 
 
 ### Week 2 Questions
 
-1. At a high level, what is ActiveRecord? What does it do/allow you to do?
+1. At a high level, what is ActiveRecord? What does it do/allow you to do? It a way for us to be able to interact with databases that we have created.  We can use queries and even call sort methods.  
 2. Assume you have the following model:
 
 ```ruby
@@ -15,9 +15,10 @@ class Team << ActiveRecord::Base
 end
 ```
 
-What are some methods you can call on `Team`? If these methods aren't defined in the class, how do you have access to them?
+What are some methods you can call on `Team`? If these methods aren't defined in the class, how do you have access to them? .find, .find_by, ave, .all.  Active record has these methods built in
 
 3. Assume that in your database, a team has the following attributes: "id", "name", owner_id". How would you find the name of a team with an id of 4? Assuming your class only included the code from question 2, how could you find the owner of the same team?
+Team.find(4).name
 
 4. Assume that you added a line to your `Team` class as follows:
 
@@ -28,11 +29,16 @@ end
 ```
 
 Now how would you find the owner of the team with an id of 4?
+Team.find(4).owner
 
-5. In a database that's holding students and teachers, what will be the relationship between students and teachers? Draw the schema diagram.
-6. Define foreign key, primary key, and schema.
-7. Describe the relationship between a foreign key on one table and a primary key on another table.
-8. What are the parts of an HTTP response?
+5. In a database that's holding students and teachers, what will be the relationship between students and teachers? A teacher has many students.  student belongs to teacher.
+
+Draw the schema diagram.  See attached.  
+
+6. Define foreign key, primary key, and schema. Foreign - A key that relates to another table. Primary - usually the id key in a table.  Schema - The format in which are tables are created, in a visual view.
+
+7. Describe the relationship between a foreign key on one table and a primary key on another table.  A foreign key is a way to connect your table with a table that has a corresponding primary key
+8. What are the parts of an HTTP response? Status, response and body.
 
 
 ### Optional Questions
@@ -51,7 +57,7 @@ Now how would you find the owner of the team with an id of 4?
 Choose One:
 * I was able to answer every question without relying on outside resources
 * I was able to answer most questions independently, but utilized outside resources for a few
-* I was able to answer a few questions independently, but relied heavily on outside resources 
+* I was able to answer a few questions independently, but relied heavily on outside resources
 
 Choose One:
 * I feel confident about the content presented this week
